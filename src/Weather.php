@@ -27,6 +27,19 @@ class Weather
 
     public function getWeather($city, string $type = 'base', string $format = 'json')
     {
-        //todo
+        $url = 'https://restapi.amap.com/v3/weather/weatherInfo';
+
+        $query = array_filter([
+            'key' => $this->key,
+            'city' => $city,
+            'output' => $format,
+            'extensions' => $type,
+        ]);
+
+        $response = $this->getHttpClient()->get($url, [
+            'query' => $query,
+        ])->getBody()->getContents();
+
+        return 'json' === $format ? \json_decode($response, true) : $response;
     }
 }
