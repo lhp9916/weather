@@ -2,6 +2,7 @@
 
 <p align="center">基于 高德开放平台 的 PHP 天气信息组件。</p>
 
+[![Build Status](https://travis-ci.com/lhp9916/weather.svg?branch=master)](https://travis-ci.com/lhp9916/weather)
 
 ## 安装
 
