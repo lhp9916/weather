@@ -17,5 +17,12 @@
         "psr-4": {
             "Lhp9916\\Weather\\": "./src"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Lhp9916\\Weather\\ServiceProvider"
+            ]
+        }
     }
 }
